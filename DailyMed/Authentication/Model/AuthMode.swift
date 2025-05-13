@@ -8,6 +8,6 @@
 import Foundation
 
 enum AuthMode: String {
-    case signIn
-    case signUp
+    case signIn = "Sign In"
+    case signUp = "Sign Up"
 }
