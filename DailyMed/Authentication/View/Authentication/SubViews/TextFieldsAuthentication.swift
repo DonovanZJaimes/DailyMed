@@ -58,7 +58,6 @@ struct TextFieldsAuthentication: View {
             }
             
         }
-        //.padding(.horizontal, 20)
     }
 }
 

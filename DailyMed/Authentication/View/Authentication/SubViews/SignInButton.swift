@@ -18,7 +18,6 @@ struct SignInButton: View {
                 .frame(maxWidth: .infinity)
                 .frame(height: 48)
                 .foregroundStyle(Color.white)
-                //.background(LinearGradient(colors: [Color.cBlue2, Color.cBlue3], startPoint: .bottom, endPoint: .top))
                 .background(LinearGradient(colors: [Color.cBlue1], startPoint: .bottom, endPoint: .top))
                 .clipShape(RoundedRectangle(cornerRadius: 25))
                 .shadow(color: .gray.opacity(isPressed ? 0.6 : 0.4), radius: isPressed ? 10 : 4, x: 0, y: isPressed ? 6 : 2)

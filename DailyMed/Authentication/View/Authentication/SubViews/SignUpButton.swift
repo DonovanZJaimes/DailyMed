@@ -9,15 +9,17 @@ import SwiftUI
 
 struct SignUpButton: View {
     @State private var isPressed: Bool = false
-    @Binding var isRedirectedToView: Bool
+    @State private var isRedirectedToView: Bool = false
+    
+    var doesItRegister: Bool
     var body: some View {
         Button {
-            if isRedirectedToView {
-                //SignUpAuthentication(isRedirectedToView: $isRedirectedToView)
-                print("holi33")
+            if doesItRegister {
+                print("nos registramos")
             }
             else {
-                print("holi2")
+                isRedirectedToView = true
+                
             }
             
         } label: {
@@ -43,12 +45,14 @@ struct SignUpButton: View {
                 })
             
         )
+        .sheet(isPresented: $isRedirectedToView) {
+            SignUpAuthentication()
+        }
        
     }
     
 }
 
 #Preview {
-    @Previewable @State var isRedirectedToView: Bool = false
-    SignUpButton(isRedirectedToView: $isRedirectedToView)
+    SignUpButton(doesItRegister: false)
 }
