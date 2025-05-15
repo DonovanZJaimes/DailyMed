@@ -47,12 +47,16 @@ struct SignUpButton: View {
         )
         .sheet(isPresented: $isRedirectedToView) {
             SignUpAuthentication()
+                .presentationDetents([.large])
+                
+                
         }
        
     }
     
 }
 
-#Preview {
+#Preview(traits: .sizeThatFitsLayout) {
     SignUpButton(doesItRegister: false)
+        .padding(.all, 10)
 }

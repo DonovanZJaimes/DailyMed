@@ -61,10 +61,11 @@ struct TextFieldsAuthentication: View {
     }
 }
 
-#Preview {
+#Preview(traits: .sizeThatFitsLayout) {
     @Previewable @State var email: String = ""
     @Previewable @State var errorEmail: String = ""
     @Previewable @State var password: String = ""
     @Previewable @State var errorPassword: String = "The password is incorrect"
     TextFieldsAuthentication(email: $email, errorEmail: $errorEmail, password: $password, errorPassword: $errorPassword)
+        .padding(.all, 20)
 }

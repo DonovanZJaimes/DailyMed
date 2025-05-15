@@ -45,6 +45,8 @@ struct GoogleAuthenticationButton: View {
     }
 }
 
-#Preview {
+#Preview(traits: .sizeThatFitsLayout) {
     GoogleAuthenticationButton()
+        .padding(.all, 10)
+    
 }
