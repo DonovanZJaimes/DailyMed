@@ -40,6 +40,7 @@ struct SignInButton: View {
     
 }
 
-#Preview {
+#Preview(traits: .sizeThatFitsLayout) {
     SignInButton()
+        .padding(.all, 10)
 }
