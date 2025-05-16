@@ -15,7 +15,7 @@ struct SignUpAuthentication: View {
     
     var body: some View {
         ZStack(alignment: .center){
-            Image("pill4")
+            Image("BackgroundOfPills2")
                 .resizable()
                 .scaledToFill()
                 .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
