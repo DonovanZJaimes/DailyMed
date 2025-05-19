@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseAnalytics
 
 struct SignUpButton: View {
     @State private var isPressed: Bool = false
@@ -16,9 +17,12 @@ struct SignUpButton: View {
         Button {
             if doesItRegister {
                 print("nos registramos")
+                Analytics.logEvent("SignUp_button_tapped", parameters: ["method": "email_and_password"])
             }
             else {
                 isRedirectedToView = true
+                Analytics.logEvent(AnalyticsEventScreenView, parameters: [AnalyticsParameterScreenName: "SignUpAuthentication"])
+                
                 
             }
             

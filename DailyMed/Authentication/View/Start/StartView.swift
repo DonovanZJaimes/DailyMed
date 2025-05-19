@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseAnalytics
 
 struct StartView: View {
     @State private var showSignInAuth: Bool = false
@@ -45,6 +46,8 @@ struct StartView: View {
                     
                 Button(action: {
                     showSignInAuth = true
+                    Analytics.logEvent("start_App_DailyMed", parameters: ["start_method":"open_app_for_first_time"])
+                    
                 }) {
                     Text("Start")
                         .fontWeight(.bold)

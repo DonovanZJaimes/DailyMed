@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FirebaseCore
+import FirebaseAnalytics
 
 class AppDelegate: NSObject, UIApplicationDelegate {
   func application(_ application: UIApplication,
@@ -26,3 +27,13 @@ struct DailyMedApp: App {
         }
     }
 }
+
+/**
+ import FirebaseAnalytics
+
+ // ... después de que un usuario inicia sesión, por ejemplo:
+ func userDidLogin(userType: String) {
+     Analytics.setUserProperty(userType, forName: "user_type")
+ }
+
+ */
