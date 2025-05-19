@@ -6,6 +6,7 @@ target 'DailyMed' do
   use_frameworks!
 
   # Pods for DailyMed
+  pod 'FirebaseCore' 
 
   # Add the Firebase pod for Google Analytics
   pod 'FirebaseAnalytics'
