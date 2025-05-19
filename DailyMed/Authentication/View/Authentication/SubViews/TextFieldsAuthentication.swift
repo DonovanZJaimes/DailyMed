@@ -28,10 +28,10 @@ struct TextFieldsAuthentication: View {
                     }
                 if !errorEmail.isEmpty {
                     Text(errorEmail)
-                        .font(.callout)
+                        .font(.system(size: 12, weight: .light, design: .rounded))
                         .foregroundStyle(Color.red)
                         .padding(.top, 5)
-                        .lineLimit(1)
+                        .lineLimit(3)
                 }
             }
             
@@ -50,10 +50,10 @@ struct TextFieldsAuthentication: View {
                     }
                 if !errorPassword.isEmpty {
                     Text(errorPassword)
-                        .font(.callout)
+                        .font(.system(size: 12, weight: .light, design: .rounded))
                         .foregroundStyle(Color.red)
                         .padding(.top, 5)
-                        .lineLimit(1)
+                        .lineLimit(3)
                 }
             }
             
@@ -65,7 +65,7 @@ struct TextFieldsAuthentication: View {
     @Previewable @State var email: String = ""
     @Previewable @State var errorEmail: String = ""
     @Previewable @State var password: String = ""
-    @Previewable @State var errorPassword: String = "The password is incorrect"
+    @Previewable @State var errorPassword: String = "The password must have at least one lowercase letter, one uppercase letter, one number, one special character, and more than 6 characeres"
     TextFieldsAuthentication(email: $email, errorEmail: $errorEmail, password: $password, errorPassword: $errorPassword)
         .padding(.all, 20)
 }
