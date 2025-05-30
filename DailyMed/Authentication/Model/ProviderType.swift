@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+import Foundation
+enum ProviderType: String, CaseIterable {
+    case email
+    case google
+    case none
+}
